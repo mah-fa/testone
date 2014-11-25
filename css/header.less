@@ -1,0 +1,39 @@
+
+#header {
+    height: ;
+    background-color: #f7f6eb;
+    border-bottom: 1px solid #68696b;
+    position: fixed;
+    top: 0px;
+    left: 50%;
+    @media @sph {
+        width: @4cols + 2*(@gutter/@em);
+        margin-left: -(@4cols + 2*(@gutter/@em))/2;
+        height: 44px;
+    }
+    @media @ph {
+        width: @6cols + 2*(@gutter/@em);
+        margin-left: -(@6cols + 2*(@gutter/@em))/2;
+        height: 44px;
+    }
+    @media @tab {
+        width: @8cols + 2*(@gutter/@em);
+        margin-left: -(@8cols + 2*(@gutter/@em))/2;
+        height: 60px;
+    }
+    @media @lap {
+        width: @10cols + 2*(@gutter/@em);
+        margin-left: -(@10cols + 2*(@gutter/@em))/2;
+        height: 72px;
+    }
+    @media @des {
+        width: @12cols + 2*(@gutter/@em);
+        margin-left: -(@12cols + 2*(@gutter/@em))/2;
+        height: 72px;
+    }
+    @media @ldes {
+        width: @16cols + 2*(@gutter/@em);
+        margin-left: -(@16cols + 2*(@gutter/@em))/2;
+        height: 72px;
+    }
+}

@@ -1,0 +1,80 @@
+@import "frameless";
+@import "mediaqueries";
+@import "header";
+@import "home";
+@import "gift";
+@import "store";
+@import "stuff";
+@import "follow";
+@import "contact";
+@import "logo";
+@import "nav";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper {
+    margin-top: 72px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px;
+    background: yellow;
+    @media @sph {
+        width: @4cols + 2*(@gutter/@em);
+    }
+    @media @ph {
+        width: @6cols + 2*(@gutter/@em);
+    }
+    @media @tab {
+        width: @8cols + 2*(@gutter/@em);
+    }
+    @media @lap {
+        width: @10cols + 2*(@gutter/@em);
+    }
+    @media @des {
+        width: @12cols + 2*(@gutter/@em);
+    }
+    @media @ldes {
+        width: @16cols + 2*(@gutter/@em);
+    }
+}
+a.anchor{
+    display: block; 
+    position: relative;  
+    visibility: hidden;
+    @media @sph {
+        top: -44px; 
+    }
+    @media @ph {
+        top: -44px; 
+    }
+    @media @tab {
+        top: -60px; 
+    }
+    @media @lap {
+        top: -72px;
+    }
+    @media @des {
+        top: -72px;
+    }
+    @media @ldes {
+        top: -72px;
+    }
+}
+
+a:link {
+    text-decoration: none;
+    color: #68696b;
+}
+a:active {
+    color: black;
+}
+a:hover {
+    color: black;
+}
+
+p {
+    text-decoration: none;
+}

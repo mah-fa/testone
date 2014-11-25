@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+@font-face {
+  font-family: "simia-menu";
+  src:url("fonts/simia-menu.eot");
+  src:url("fonts/simia-menu.eot?#iefix") format("embedded-opentype"),
+    url("fonts/simia-menu.woff") format("woff"),
+    url("fonts/simia-menu.ttf") format("truetype"),
+    url("fonts/simia-menu.svg#simia-menu") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "simia-menu" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "simia-menu" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-contact-06:before {
+  content: "a";
+}
+.icon-follow-05:before {
+  content: "b";
+}
+.icon-gift-02:before {
+  content: "c";
+}
+.icon-home-01:before {
+  content: "d";
+}
+.icon-shop-03:before {
+  content: "e";
+}
+.icon-stuff-04:before {
+  content: "f";
+}

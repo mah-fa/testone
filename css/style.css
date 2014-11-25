@@ -1,0 +1,846 @@
+/*
+	Frameless			<http://framelessgrid.com/>
+	by Joni Korpi 		<http://jonikorpi.com/>
+	licensed under CC0	<http://creativecommons.org/publicdomain/zero/1.0/>
+*/
+/*
+	Margin, padding, and border resets
+	except for form elements
+*/
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+th,
+td,
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+/*
+	Consistency fixes
+	adopted from http://necolas.github.com/normalize.css/
+*/
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+audio,
+canvas,
+video {
+  display: block;
+}
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+body {
+  min-height: 100%;
+  font-size: 100%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+b,
+strong {
+  font-weight: bold;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+a img,
+img {
+  -ms-interpolation-mode: bicubic;
+  border: 0;
+}
+input,
+textarea,
+button,
+select {
+  margin: 0;
+  font-size: 100%;
+  line-height: normal;
+  vertical-align: baseline;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  cursor: pointer;
+  -webkit-appearance: button;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
+textarea {
+  overflow: auto;
+}
+/*
+	These are easy to forget
+*/
+::selection {
+  background: red;
+  color: white;
+}
+::-moz-selection {
+  background: red;
+  color: white;
+}
+img::selection {
+  background: transparent;
+}
+img::-moz-selection {
+  background: transparent;
+}
+body {
+  -webkit-tap-highlight-color: rgba(255, 0, 0, 0.62);
+}
+/*
+	Style overrides for IE6-8
+	http://jonikorpi.com/leaving-old-IE-behind/
+*/
+/*
+	An easy way to zoom your entire layout in or out (as long as it's set in ems).
+	Just change the media queries to activate them.
+	Assuming your base font-size is 16:
+	- the first one zooms out by a factor of (16-2)/16 = 0.875
+	- the second one zooms in by a factor of (16+2)/16 = 1.125  
+*/
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 0.875em;
+  }
+}
+@media screen and (max-width: 1px) {
+  body {
+    font-size: 1.125em;
+  }
+}
+#header {
+  height: ;
+  background-color: #f7f6eb;
+  border-bottom: 1px solid #68696b;
+  position: fixed;
+  top: 0px;
+  left: 50%;
+}
+@media screen and (max-width:480px) {
+  #header {
+    width: 19.5em;
+    margin-left: -9.75em;
+    height: 44px;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 599px) {
+  #header {
+    width: 28.5em;
+    margin-left: -14.25em;
+    height: 44px;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 767px) {
+  #header {
+    width: 37.5em;
+    margin-left: -18.75em;
+    height: 60px;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+  #header {
+    width: 46.5em;
+    margin-left: -23.25em;
+    height: 72px;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1279px) {
+  #header {
+    width: 55.5em;
+    margin-left: -27.75em;
+    height: 72px;
+  }
+}
+@media screen and (min-width:1280px) {
+  #header {
+    width: 73.5em;
+    margin-left: -36.75em;
+    height: 72px;
+  }
+}
+#home {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#gift {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#store {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#stuff {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#follow {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#contact {
+  width: 100%;
+  float: left;
+  height: 500px;
+  background-color: ;
+}
+#logo {
+  width: 90px;
+  height: 84px;
+  position: fixed;
+  top: 36px;
+  left: 50%;
+  margin-left: -45px;
+}
+@media screen and (max-width:480px) {
+  #logo {
+    top: 8px;
+    margin-left: -140px;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 599px) {
+  #logo {
+    top: 8px;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 767px) {
+  #logo {
+    top: 24px;
+  }
+}
+#logo img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.nav {
+  background-color: ;
+}
+@media screen and (max-width:480px) {
+  .nav {
+    width: 18em;
+    height: 32px;
+    margin-top: 104px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: ;
+  }
+  .nav .half {
+    width: 100%;
+    height: 100%;
+    background-color: ;
+    float: left;
+    clear: ;
+  }
+  .nav .half .ll {
+    width: 1.5em;
+    height: 100%;
+    background-color: red;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .ll .iconmy {
+    width: 0px;
+    height: 0px;
+    margin-left: 9px;
+    margin-bottom: 12px;
+    float: left;
+    background-color: white;
+    border: 1px solid #cccac3;
+  }
+  .nav .half .ll .iconmy .top {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  .nav .half .ll .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+  .nav .half .lr {
+    width: 3em;
+    height: 120px;
+    background-color: ;
+    float: left;
+    opacity: 1;
+    overflow: ;
+  }
+  .nav .half .lr .iconmy {
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+    margin-bottom: 12px;
+    float: left;
+    background-color: white;
+    border: 1px solid #cccac3;
+  }
+  .nav .half .lr .iconmy .top {
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  .nav .half .lr .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3em;
+    height: 120px;
+    margin-left: 1.5em;
+    background-color: ;
+    margin-top: 102px;
+    float: left;
+    opacity: 1;
+    clear: ;
+  }
+  .nav .half .rl .iconmy {
+    width: 30px;
+    height: 30px;
+    margin-left: 9px;
+    margin-bottom: 12px;
+    float: left;
+    background-color: white;
+    border: 1px solid #cccac3;
+  }
+  .nav .half .rl .iconmy .top {
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  .nav .half .rl .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 3em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr .iconmy {
+    width: 0px;
+    height: 0px;
+    margin-left: 9px;
+    margin-bottom: 12px;
+    float: left;
+    background-color: white;
+    border: 1px solid #cccac3;
+  }
+  .nav .half .rr .iconmy .top {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    font-size: 18px;
+    padding-top: 6px;
+  }
+  .nav .half .rr .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 599px) {
+  .nav {
+    width: 27em;
+    height: 32px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 8.25em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 5.25em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 5.25em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 8.25em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 28px;
+    height: 100%;
+    margin-left: 16px;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 19px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 767px) {
+  .nav {
+    width: 37.5em;
+    height: 32px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    font-size: 21px;
+    padding-top: 6px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 0px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+    opacity: 0;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+  .nav {
+    width: 37.5em;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    font-size: 21px;
+    padding-top: 2px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 9px;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1279px) {
+  .nav {
+    width: 55.5em;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: ;
+  }
+  .nav .half {
+    width: 27em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 13.5em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 13.5em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 13.5em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 13.5em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 32px;
+    text-align: center;
+    font-size: 24px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 16px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 8px;
+  }
+}
+@media screen and (min-width:1280px) {
+  .nav {
+    width: 37.5em;
+    height: 48px;
+    margin-top: 12px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav .half {
+    width: 50%;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .ll {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .half .lr {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rl {
+    width: 3.75em;
+    height: 100%;
+    background-color: ;
+    float: left;
+    opacity: 0;
+  }
+  .nav .half .rr {
+    width: 15em;
+    height: 100%;
+    background-color: ;
+    float: left;
+  }
+  .nav .iconmy {
+    width: 3em;
+    height: 100%;
+    margin-left: 1.5em;
+    float: left;
+    background-color: ;
+  }
+  .nav .iconmy .top {
+    width: 100%;
+    height: 28px;
+    text-align: center;
+    font-size: 28px;
+  }
+  .nav .iconmy .bottom {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    direction: rtl;
+    font-family: "Droid Arabic Naskh";
+    font-size: 8px;
+    padding-top: 6px;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+.wrapper {
+  margin-top: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0px;
+  background: yellow;
+}
+@media screen and (max-width:480px) {
+  .wrapper {
+    width: 19.5em;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 599px) {
+  .wrapper {
+    width: 28.5em;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 767px) {
+  .wrapper {
+    width: 37.5em;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+  .wrapper {
+    width: 46.5em;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1279px) {
+  .wrapper {
+    width: 55.5em;
+  }
+}
+@media screen and (min-width:1280px) {
+  .wrapper {
+    width: 73.5em;
+  }
+}
+a.anchor {
+  display: block;
+  position: relative;
+  visibility: hidden;
+}
+@media screen and (max-width:480px) {
+  a.anchor {
+    top: -44px;
+  }
+}
+@media screen and (min-width:481px) and (max-width: 599px) {
+  a.anchor {
+    top: -44px;
+  }
+}
+@media screen and (min-width:600px) and (max-width: 767px) {
+  a.anchor {
+    top: -60px;
+  }
+}
+@media screen and (min-width:768px) and (max-width: 1023px) {
+  a.anchor {
+    top: -72px;
+  }
+}
+@media screen and (min-width:1024px) and (max-width: 1279px) {
+  a.anchor {
+    top: -72px;
+  }
+}
+@media screen and (min-width:1280px) {
+  a.anchor {
+    top: -72px;
+  }
+}
+a:link {
+  text-decoration: none;
+  color: #68696b;
+}
+a:active {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+p {
+  text-decoration: none;
+}
